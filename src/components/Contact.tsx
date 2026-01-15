@@ -29,20 +29,20 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "mahmoudkwaik@gmail.com",
-      href: "mailto:mahmoudkwaik@gmail.com"
+      value: "mahmoudkwaik99@gmail.com",
+      href: "mailto:mahmoudkwaik99@gmail.com"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "mahmoud-abukwaik-b",
-      href: "https://linkedin.com/in/mahmoud-abukwaik-b"
+      value: "mahmoud-abukwaik-85b315346",
+      href: "https://www.linkedin.com/in/mahmoud-abukwaik-85b315346/"
     },
     {
       icon: Github,
       label: "GitHub",
-      value: "mahmoudkwaik",
-      href: "https://github.com/mahmoudkwaik"
+      value: "mahmoudkwaik04",
+      href: "https://github.com/mahmoudkwaik04"
     },
     {
       icon: MapPin,
