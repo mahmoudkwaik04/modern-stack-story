@@ -7,28 +7,28 @@ const Projects = () => {
       title: "Marketing Agency Website",
       description: "Full-stack website for Trendow Marketing Agency with modern UI/UX, responsive design, and robust backend functionality.",
       technologies: ["ASP.NET", "C#", "JavaScript", "SQL", "Bootstrap"],
-      github: "https://github.com/mahmoudkwaik",
+      github: "https://github.com/mahmoudkwaik04?tab=repositories",
       featured: true
     },
     {
       title: "Database-Driven Web App",
       description: "A scalable web application with SQL database integration, user authentication, and CRUD operations following best practices.",
       technologies: ["C#", "MySQL", "HTML/CSS", "JavaScript"],
-      github: "https://github.com/mahmoudkwaik",
+      github: "https://github.com/mahmoudkwaik04?tab=repositories",
       featured: true
     },
     {
       title: "E-Commerce Platform",
       description: "Full-stack e-commerce solution with product management, shopping cart functionality, and secure payment integration.",
       technologies: ["ASP.NET", "SQL Server", "Bootstrap", "JavaScript"],
-      github: "https://github.com/mahmoudkwaik",
+      github: "https://github.com/mahmoudkwaik04?tab=repositories",
       featured: false
     },
     {
       title: "Task Management System",
       description: "Productivity application for managing tasks and projects with real-time updates and collaborative features.",
       technologies: ["C#", "SQL", "Bootstrap", "OOP"],
-      github: "https://github.com/mahmoudkwaik",
+      github: "https://github.com/mahmoudkwaik04?tab=repositories",
       featured: false
     }
   ];
@@ -132,7 +132,7 @@ const Projects = () => {
         {/* View more button */}
         <div className="text-center mt-12">
           <Button variant="outline" size="lg" asChild>
-            <a href="https://github.com/mahmoudkwaik" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/mahmoudkwaik04?tab=repositories" target="_blank" rel="noopener noreferrer">
               View All Projects on GitHub
               <ExternalLink className="ml-2 h-4 w-4" />
             </a>
