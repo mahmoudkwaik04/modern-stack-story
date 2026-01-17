@@ -122,7 +122,7 @@
 
 @layer utilities {
   .section-padding {
-    @apply py-20 md:py-28 lg:py-32;
+    @apply py-14 sm:py-20 md:py-28 lg:py-32;
   }
 
   .container-narrow {
@@ -131,6 +131,15 @@
 
   .container-wide {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Hide scrollbar for mobile horizontal scroll */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }
 

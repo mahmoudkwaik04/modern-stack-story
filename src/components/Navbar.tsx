@@ -73,25 +73,31 @@ const Navbar = () => {
         </div>
 
         {/* Mobile menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
-            <div className="flex flex-col gap-4">
+        <div 
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="py-4 border-t border-border bg-background/95 backdrop-blur-lg">
+            <div className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors py-2"
+                  className="text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-all py-3 px-4 rounded-lg"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
                 </a>
               ))}
-              <Button variant="outline" size="sm" className="w-fit" asChild>
-                <a href="mailto:mahmoudkwaik@gmail.com">Hire Me</a>
-              </Button>
+              <div className="px-4 pt-4 mt-2 border-t border-border">
+                <Button variant="hero" size="default" className="w-full" asChild>
+                  <a href="mailto:mahmoudkwaik@gmail.com">Hire Me</a>
+                </Button>
+              </div>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );

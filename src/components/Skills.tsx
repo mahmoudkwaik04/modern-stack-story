@@ -59,32 +59,32 @@ const Skills = () => {
 
   return (
     <section id="skills" className="section-padding relative bg-secondary/30">
-      <div className="container-wide">
-        <div className="text-center mb-16">
-          <span className="text-primary font-mono text-sm tracking-wider uppercase mb-4 block">
+      <div className="container-wide px-5 sm:px-6">
+        <div className="text-center mb-10 sm:mb-16">
+          <span className="text-primary font-mono text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4 block">
             Technical Expertise
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
             Skills & <span className="gradient-text">Technologies</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto px-2">
             A comprehensive toolkit for building robust, scalable applications from front to back
           </p>
         </div>
 
-        {/* Category tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        {/* Category tabs - scrollable on mobile */}
+        <div className="flex overflow-x-auto pb-2 sm:pb-0 sm:flex-wrap justify-start sm:justify-center gap-2 sm:gap-3 mb-8 sm:mb-12 -mx-5 px-5 sm:mx-0 sm:px-0 scrollbar-hide">
           {categories.map((category, index) => (
             <button
               key={index}
               onClick={() => setActiveCategory(index)}
-              className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+              className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-medium transition-all duration-300 whitespace-nowrap flex-shrink-0 text-sm sm:text-base ${
                 activeCategory === index
                   ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20"
                   : "bg-card border border-border hover:border-primary/30 text-muted-foreground hover:text-foreground"
               }`}
             >
-              <span className="mr-2">{category.icon}</span>
+              <span className="mr-1.5 sm:mr-2">{category.icon}</span>
               {category.title}
             </button>
           ))}
@@ -115,9 +115,9 @@ const Skills = () => {
         </div>
 
         {/* Language proficiency */}
-        <div className="mt-16 pt-16 border-t border-border">
-          <h3 className="text-center text-xl font-semibold mb-8">Language Proficiency</h3>
-          <div className="flex flex-wrap justify-center gap-6">
+        <div className="mt-12 sm:mt-16 pt-10 sm:pt-16 border-t border-border">
+          <h3 className="text-center text-lg sm:text-xl font-semibold mb-6 sm:mb-8">Language Proficiency</h3>
+          <div className="grid grid-cols-3 gap-3 sm:flex sm:flex-wrap sm:justify-center sm:gap-6 max-w-md sm:max-w-none mx-auto">
             {[
               { lang: "Arabic", level: "Native", flag: "🇵🇸" },
               { lang: "English", level: "B2", flag: "🇬🇧" },
@@ -125,11 +125,11 @@ const Skills = () => {
             ].map((item) => (
               <div
                 key={item.lang}
-                className="px-6 py-4 rounded-xl border border-border bg-card hover:border-primary/30 transition-all duration-300"
+                className="flex flex-col sm:flex-row items-center gap-1 sm:gap-0 px-3 sm:px-6 py-3 sm:py-4 rounded-xl border border-border bg-card hover:border-primary/30 transition-all duration-300 text-center"
               >
-                <span className="text-2xl mr-3">{item.flag}</span>
-                <span className="font-medium">{item.lang}</span>
-                <span className="text-muted-foreground ml-2">({item.level})</span>
+                <span className="text-xl sm:text-2xl sm:mr-3">{item.flag}</span>
+                <span className="font-medium text-sm sm:text-base">{item.lang}</span>
+                <span className="text-muted-foreground text-xs sm:text-base sm:ml-2">({item.level})</span>
               </div>
             ))}
           </div>
