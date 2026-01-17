@@ -38,34 +38,34 @@ const Projects = () => {
 
   return (
     <section id="projects" className="section-padding relative bg-secondary/30">
-      <div className="container-wide">
-        <div className="text-center mb-16">
-          <span className="text-primary font-mono text-sm tracking-wider uppercase mb-4 block">
+      <div className="container-wide px-5 sm:px-6">
+        <div className="text-center mb-10 sm:mb-16">
+          <span className="text-primary font-mono text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4 block">
             Portfolio
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto px-2">
             A selection of projects that showcase my skills and passion for development
           </p>
         </div>
 
         {/* Featured projects */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-4 sm:gap-8 mb-10 sm:mb-16">
           {featuredProjects.map((project, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 hover:border-primary/30 transition-all duration-500 hover:shadow-lg"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-5 sm:p-8 hover:border-primary/30 transition-all duration-500 hover:shadow-lg"
             >
               {/* Hover gradient effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative">
                 {/* Header */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Folder className="h-6 w-6 text-primary" />
+                <div className="flex items-start justify-between mb-3 sm:mb-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <Folder className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                   </div>
                   <a
                     href={project.github}
@@ -78,19 +78,19 @@ const Projects = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground mb-6 line-clamp-3">
+                <p className="text-muted-foreground text-sm sm:text-base mb-4 sm:mb-6 line-clamp-3">
                   {project.description}
                 </p>
 
                 {/* Technologies */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 rounded-full bg-secondary text-xs font-mono text-muted-foreground"
+                      className="px-2 sm:px-3 py-1 rounded-full bg-secondary text-xs font-mono text-muted-foreground"
                     >
                       {tech}
                     </span>
@@ -102,27 +102,27 @@ const Projects = () => {
         </div>
 
         {/* Other projects */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {otherProjects.map((project, index) => (
             <div
               key={index}
-              className="group p-6 rounded-xl border border-border bg-card hover:border-primary/30 transition-all duration-300"
+              className="group p-4 sm:p-6 rounded-xl border border-border bg-card hover:border-primary/30 transition-all duration-300"
             >
-              <div className="flex items-center justify-between mb-3">
-                <Folder className="h-5 w-5 text-primary" />
+              <div className="flex items-center justify-between mb-2 sm:mb-3">
+                <Folder className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="sm:opacity-0 group-hover:opacity-100 transition-opacity"
                 >
                   <Github className="h-4 w-4 text-muted-foreground hover:text-foreground" />
                 </a>
               </div>
-              <h4 className="font-semibold mb-2 group-hover:text-primary transition-colors">
+              <h4 className="font-semibold text-sm sm:text-base mb-1 sm:mb-2 group-hover:text-primary transition-colors line-clamp-1">
                 {project.title}
               </h4>
-              <p className="text-sm text-muted-foreground line-clamp-2">
+              <p className="text-xs sm:text-sm text-muted-foreground line-clamp-2">
                 {project.description}
               </p>
             </div>

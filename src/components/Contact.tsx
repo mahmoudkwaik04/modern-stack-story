@@ -74,45 +74,45 @@ const Contact = () => {
 
   return (
     <section id="contact" className="section-padding relative bg-secondary/30">
-      <div className="container-wide">
-        <div className="text-center mb-16">
-          <span className="text-primary font-mono text-sm tracking-wider uppercase mb-4 block">
+      <div className="container-wide px-5 sm:px-6">
+        <div className="text-center mb-10 sm:mb-16">
+          <span className="text-primary font-mono text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4 block">
             Get In Touch
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
             Let's <span className="gradient-text">Connect</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto px-2">
             Have a project in mind or want to discuss opportunities? I'd love to hear from you.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
           {/* Contact info */}
           <div>
-            <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-            <div className="space-y-4">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center lg:text-left">Contact Information</h3>
+            <div className="space-y-3 sm:space-y-4">
               {contactLinks.map((link) => (
                 <div
                   key={link.label}
-                  className="group flex items-center gap-4 p-4 rounded-xl border border-border bg-card hover:border-primary/30 transition-all duration-300"
+                  className="group flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl border border-border bg-card hover:border-primary/30 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <link.icon className="h-5 w-5 text-primary" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                    <link.icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                   </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">{link.label}</p>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-xs sm:text-sm text-muted-foreground">{link.label}</p>
                     {link.href ? (
                       <a
                         href={link.href}
                         target={link.href.startsWith('mailto') ? undefined : "_blank"}
                         rel="noopener noreferrer"
-                        className="font-medium hover:text-primary transition-colors"
+                        className="font-medium text-sm sm:text-base hover:text-primary transition-colors truncate block"
                       >
                         {link.value}
                       </a>
                     ) : (
-                      <p className="font-medium">{link.value}</p>
+                      <p className="font-medium text-sm sm:text-base">{link.value}</p>
                     )}
                   </div>
                 </div>
@@ -121,7 +121,7 @@ const Contact = () => {
           </div>
 
           {/* Contact form */}
-          <div className="p-8 rounded-2xl border border-border bg-card">
+          <div className="p-5 sm:p-8 rounded-2xl border border-border bg-card">
             {submitted ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-8">
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
